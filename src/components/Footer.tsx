@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import {
   MapPinIcon,
   PhoneIcon,
@@ -7,35 +7,35 @@ import {
   HeartIcon,
   ShieldCheckIcon,
   TruckIcon,
-  CreditCardIcon
-} from '@heroicons/react/24/outline';
+  CreditCardIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/collections', label: 'Collections' },
-    { href: '/rings', label: 'Rings' },
-    { href: '/necklaces', label: 'Necklaces' },
-    { href: '/earrings', label: 'Earrings' },
-    { href: '/about', label: 'About Us' }
+    { href: "/", label: "Home" },
+    { href: "/collections", label: "Collections" },
+    { href: "/rings", label: "Rings" },
+    { href: "/necklaces", label: "Necklaces" },
+    { href: "/earrings", label: "Earrings" },
+    { href: "/about", label: "About Us" },
   ];
 
   const customerService = [
-    { href: '/contact', label: 'Contact Us' },
-    { href: '/size-guide', label: 'Size Guide' },
-    { href: '/shipping', label: 'Shipping Info' },
-    { href: '/returns', label: 'Returns & Exchange' },
-    { href: '/faq', label: 'FAQ' },
-    { href: '/care-guide', label: 'Care Guide' }
+    { href: "/contact", label: "Contact Us" },
+    { href: "/size-guide", label: "Size Guide" },
+    { href: "/shipping", label: "Shipping Info" },
+    { href: "/returns", label: "Returns & Exchange" },
+    { href: "/faq", label: "FAQ" },
+    { href: "/care-guide", label: "Care Guide" },
   ];
 
   const legal = [
-    { href: '/privacy', label: 'Privacy Policy' },
-    { href: '/terms', label: 'Terms of Service' },
-    { href: '/cookies', label: 'Cookie Policy' },
-    { href: '/accessibility', label: 'Accessibility' }
+    { href: "/privacy", label: "Privacy Policy" },
+    { href: "/terms", label: "Terms of Service" },
+    { href: "/cookies", label: "Cookie Policy" },
+    { href: "/accessibility", label: "Accessibility" },
   ];
 
   return (
@@ -49,10 +49,14 @@ export default function Footer() {
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
               Stay in Touch with
-              <span className="bg-gradient-to-r from-amber-400 via-rose-400 to-purple-400 bg-clip-text text-transparent"> Elegance</span>
+              <span className="bg-gradient-to-r from-amber-400 via-rose-400 to-purple-400 bg-clip-text text-transparent">
+                {" "}
+                Elegance
+              </span>
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Be the first to discover our new collections, exclusive offers, and jewelry care tips. Join our community of jewelry enthusiasts.
+              Be the first to discover our new collections, exclusive offers,
+              and jewelry care tips. Join our community of jewelry enthusiasts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
@@ -70,7 +74,6 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-
             {/* Brand Section */}
             <div className="lg:col-span-1">
               <Link href="/" className="inline-block mb-6 group">
@@ -79,9 +82,10 @@ export default function Footer() {
                 </span>
               </Link>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Crafting timeless jewelry pieces that celebrate life's precious moments. Each piece tells a story of elegance, quality, and artisan craftsmanship.
+                Crafting timeless jewelry pieces that celebrate life&apos;s
+                precious moments. Each piece tells a story of elegance, quality,
+                and artisan craftsmanship.
               </p>
-
               {/* Key Features */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
@@ -101,7 +105,9 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-6">Collections</h4>
+              <h4 className="text-lg font-semibold text-white mb-6">
+                Collections
+              </h4>
               <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
@@ -118,7 +124,9 @@ export default function Footer() {
 
             {/* Customer Service */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-6">Customer Care</h4>
+              <h4 className="text-lg font-semibold text-white mb-6">
+                Customer Care
+              </h4>
               <ul className="space-y-3">
                 {customerService.map((link) => (
                   <li key={link.href}>
@@ -135,14 +143,17 @@ export default function Footer() {
 
             {/* Contact & Hours */}
             <div>
-              <h4 className="text-lg font-semibold text-white mb-6">Get in Touch</h4>
+              <h4 className="text-lg font-semibold text-white mb-6">
+                Get in Touch
+              </h4>
 
               {/* Contact Info */}
               <div className="space-y-4 mb-6">
                 <div className="flex items-start space-x-3">
                   <MapPinIcon className="h-5 w-5 text-amber-400 mt-0.5 flex-shrink-0" />
                   <address className="text-gray-300 text-sm not-italic leading-relaxed">
-                    123 Karol Bagh<br />
+                    123 Karol Bagh
+                    <br />
                     New Delhi, Delhi 110005
                   </address>
                 </div>
@@ -154,7 +165,9 @@ export default function Footer() {
 
                 <div className="flex items-center space-x-3">
                   <EnvelopeIcon className="h-5 w-5 text-amber-400 flex-shrink-0" />
-                  <span className="text-gray-300 text-sm">hello@elegantgems.in</span>
+                  <span className="text-gray-300 text-sm">
+                    hello@elegantgems.in
+                  </span>
                 </div>
 
                 <div className="flex items-start space-x-3">
@@ -171,10 +184,10 @@ export default function Footer() {
                 <h5 className="text-white font-medium mb-3">Follow Us</h5>
                 <div className="flex space-x-3">
                   {[
-                    { name: 'Instagram', href: '#', icon: '📷' },
-                    { name: 'Facebook', href: '#', icon: '📘' },
-                    { name: 'Pinterest', href: '#', icon: '📌' },
-                    { name: 'YouTube', href: '#', icon: '📺' }
+                    { name: "Instagram", href: "#", icon: "📷" },
+                    { name: "Facebook", href: "#", icon: "📘" },
+                    { name: "Pinterest", href: "#", icon: "📌" },
+                    { name: "YouTube", href: "#", icon: "📺" },
                   ].map((social) => (
                     <a
                       key={social.name}
@@ -194,13 +207,14 @@ export default function Footer() {
         {/* Payment Methods & Bottom Bar */}
         <div className="border-t border-gray-700/50 py-8">
           <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-
             {/* Payment Methods */}
             <div className="flex items-center space-x-4">
               <span className="text-gray-400 text-sm">We Accept:</span>
               <div className="flex items-center space-x-3">
                 <CreditCardIcon className="h-6 w-6 text-gray-400" />
-                <span className="text-gray-400 text-sm">UPI • Paytm • GPay • Card • NetBanking</span>
+                <span className="text-gray-400 text-sm">
+                  UPI • Paytm • GPay • Card • NetBanking
+                </span>
               </div>
             </div>
 
@@ -222,7 +236,10 @@ export default function Footer() {
           <div className="mt-8 pt-8 border-t border-gray-700/30 text-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Elegant Gems. All rights reserved. |
-              <span className="text-amber-400"> Crafted with passion since 2024</span>
+              <span className="text-amber-400">
+                {" "}
+                Crafted with passion since 2024
+              </span>
             </p>
           </div>
         </div>

@@ -1,111 +1,130 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
+import { useState } from "react";
+import Image from "next/image";
 import {
   MapPinIcon,
   PhoneIcon,
   EnvelopeIcon,
   ClockIcon,
   ChatBubbleLeftRightIcon,
-  SparklesIcon
-} from '@heroicons/react/24/outline';
+  SparklesIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
   const contactInfo = [
     {
       icon: MapPinIcon,
-      title: 'Visit Our Showroom',
-      details: ['123 Karol Bagh', 'New Delhi, Delhi 110005', 'India'],
-      color: 'text-amber-500'
+      title: "Visit Our Showroom",
+      details: ["123 Karol Bagh", "New Delhi, Delhi 110005", "India"],
+      color: "text-amber-500",
     },
     {
       icon: PhoneIcon,
-      title: 'Call Us',
-      details: ['+91 98765 43210', '+91 11 4567 8900', 'Mon-Sat: 10am-8pm'],
-      color: 'text-rose-500'
+      title: "Call Us",
+      details: ["+91 98765 43210", "+91 11 4567 8900", "Mon-Sat: 10am-8pm"],
+      color: "text-rose-500",
     },
     {
       icon: EnvelopeIcon,
-      title: 'Email Us',
-      details: ['hello@elegantgems.in', 'support@elegantgems.in', 'We reply within 24hrs'],
-      color: 'text-purple-500'
+      title: "Email Us",
+      details: [
+        "hello@elegantgems.in",
+        "support@elegantgems.in",
+        "We reply within 24hrs",
+      ],
+      color: "text-purple-500",
     },
     {
       icon: ClockIcon,
-      title: 'Store Hours',
-      details: ['Monday - Saturday: 10am - 8pm', 'Sunday: 11am - 7pm', 'Closed on festivals'],
-      color: 'text-green-500'
-    }
+      title: "Store Hours",
+      details: [
+        "Monday - Saturday: 10am - 8pm",
+        "Sunday: 11am - 7pm",
+        "Closed on festivals",
+      ],
+      color: "text-green-500",
+    },
   ];
 
   const locations = [
     {
-      name: 'Delhi Flagship Store',
-      address: '123 Karol Bagh, New Delhi 110005',
-      phone: '+91 98765 43210',
-      image: 'https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&h=300&fit=crop&crop=center'
+      name: "Delhi Flagship Store",
+      address: "123 Karol Bagh, New Delhi 110005",
+      phone: "+91 98765 43210",
+      image:
+        "https://images.unsplash.com/photo-1556906781-9a412961c28c?w=400&h=300&fit=crop&crop=center",
     },
     {
-      name: 'Mumbai Branch',
-      address: '456 Linking Road, Bandra West, Mumbai 400050',
-      phone: '+91 98765 43211',
-      image: 'https://images.unsplash.com/photo-1580625503369-28a205e2019e?w=400&h=300&fit=crop&crop=center'
+      name: "Mumbai Branch",
+      address: "456 Linking Road, Bandra West, Mumbai 400050",
+      phone: "+91 98765 43211",
+      image:
+        "https://images.unsplash.com/photo-1580625503369-28a205e2019e?w=400&h=300&fit=crop&crop=center",
     },
     {
-      name: 'Bangalore Branch',
-      address: '789 Brigade Road, Bangalore 560001',
-      phone: '+91 98765 43212',
-      image: 'https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop&crop=center'
-    }
+      name: "Bangalore Branch",
+      address: "789 Brigade Road, Bangalore 560001",
+      phone: "+91 98765 43212",
+      image:
+        "https://images.unsplash.com/photo-1594736797933-d0401ba2fe65?w=400&h=300&fit=crop&crop=center",
+    },
   ];
 
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
           <div className="inline-flex items-center space-x-2 bg-amber-100 rounded-full px-6 py-3 mb-8">
             <ChatBubbleLeftRightIcon className="h-5 w-5 text-amber-600" />
-            <span className="text-sm font-medium text-amber-800">Get in Touch</span>
+            <span className="text-sm font-medium text-amber-800">
+              Get in Touch
+            </span>
           </div>
 
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8 font-playfair">
-            Let's Create Something
-            <span className="bg-gradient-to-r from-amber-600 via-rose-600 to-purple-600 bg-clip-text text-transparent"> Beautiful Together</span>
+            Let&apos;s Create Something
+            <span className="bg-gradient-to-r from-amber-600 via-rose-600 to-purple-600 bg-clip-text text-transparent">
+              {" "}
+              Beautiful Together
+            </span>
           </h2>
 
           <p className="text-xl text-gray-600 leading-relaxed font-crimson">
-            Have questions about our collections? Need a custom design? Want to visit our showroom?
-            We're here to help you find the perfect piece for your special moments.
+              Have questions about our collections? Need a custom design? Want
+              to visit our showroom? We&apos;re here to help you find the
+              perfect piece for your special moments.
           </p>
         </div>
 
         {/* Contact Form & Info */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-
           {/* Contact Form */}
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-10 border border-gray-100">
             <div className="mb-8">
@@ -113,14 +132,18 @@ export default function Contact() {
                 Send us a Message
               </h3>
               <p className="text-gray-600">
-                Fill out the form below and we'll get back to you within 24 hours.
+                Fill out the form below and we'll get back to you within 24
+                hours.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -136,7 +159,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -154,7 +180,10 @@ export default function Contact() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -169,7 +198,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Subject
                   </label>
                   <select
@@ -190,7 +222,10 @@ export default function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -222,7 +257,10 @@ export default function Contact() {
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
-                <div key={index} className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
+                <div
+                  key={index}
+                  className="flex items-start space-x-6 p-6 bg-white rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300"
+                >
                   <div className={`p-4 rounded-2xl bg-gray-50`}>
                     <IconComponent className={`h-8 w-8 ${info.color}`} />
                   </div>
@@ -269,7 +307,10 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {locations.map((location, index) => (
-              <div key={index} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100">
+              <div
+                key={index}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+              >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src={location.image}
@@ -279,7 +320,9 @@ export default function Contact() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
-                    <h4 className="text-lg font-semibold font-playfair">{location.name}</h4>
+                    <h4 className="text-lg font-semibold font-playfair">
+                      {location.name}
+                    </h4>
                   </div>
                 </div>
 
@@ -287,7 +330,9 @@ export default function Contact() {
                   <div className="space-y-3">
                     <div className="flex items-start space-x-3">
                       <MapPinIcon className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-600 text-sm">{location.address}</p>
+                      <p className="text-gray-600 text-sm">
+                        {location.address}
+                      </p>
                     </div>
                     <div className="flex items-center space-x-3">
                       <PhoneIcon className="h-5 w-5 text-amber-500 flex-shrink-0" />
